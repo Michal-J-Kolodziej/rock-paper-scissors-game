@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-size: 10px;
+}
+
+div.choiceContainer div.heading {
+    width: 100vw;
+
+}
+
+div.choiceContainer div.heading h1 {
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+div.choiceContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 45vh;
+}
+
+div.choiceBox {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 2rem;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+div.choiceBox:hover {
+    box-shadow: 0 0 3px 3px grey;
+}
+
+div.choiceBox.active {
+    box-shadow: 0 0 3px 3px black;
+}
+
+div.play {
+    position: relative;
+    width: 90vw;
+
+}
+
+div.play button.start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 170px;
+    font-size: 3rem;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 0 2px 2px #333;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+div.play button.start:hover {
+    box-shadow: 0 0 4px 3px #333;
+}
+
+body div.w-100 {
+    display: flex;
+    width: 100vw;
+    height: 55vh;
+
+}
+
+div.w-100 div.w-50 {
+    flex-basis: 50%;
+}
+
+div.ai-choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.w-100 div.w-50 h2 {
+    font-size: 3rem;
+}
+
+div.ai-choice div.ai-choiceBox {
+    font-size: 2rem;
+    width: 150px;
+    height: 40px;
+    margin-left: 75px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid black;
+    align-self: flex-start;
+    transition: 0.05s;
+}
+
+div.ai-choice div.ai-choiceBox.active {
+    box-shadow: 0 0 3px 3px grey;
+}
+
+div.standings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+div.standings div {
+    font-size: 2rem;
+}
+
+div.standings div span {
+    font-size: 2rem;
+}

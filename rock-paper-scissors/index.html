@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="choiceContainer">
+        <div class="heading">
+            <h1>Pick your choice:</h1>
+        </div>
+        <div class="choiceBox" data-choice="rock">Rock</div>
+        <div class="choiceBox" data-choice="paper">Paper</div>
+        <div class="choiceBox" data-choice="scissors">Scissors</div>
+        <div class="play">
+            <button class="start">Play!</button>
+        </div>
+    </div>
+
+    <div class="w-100">
+        <div class="w-50 ai-choice">
+            <h2>Computer choice:</h2>
+            <div class="ai-choiceBox" data-choice="rock">Rock</div>
+            <div class="ai-choiceBox" data-choice="paper">Paper</div>
+            <div class="ai-choiceBox" data-choice="scissors">Scissors</div>
+        </div>
+        <div class="w-50 standings">
+            <h2>Standings:</h2>
+            <div class="wins">Wins: <span class="wins">0</span></div>
+            <div class="losses">Losses: <span class="losses">0</span></div>
+            <div class="draws">Draws: <span class="draws">0</span></div>
+            <div class="games">Games played: <span class="games">0</span></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
