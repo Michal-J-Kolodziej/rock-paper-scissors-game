@@ -1,10 +1,18 @@
 class Player {
     constructor() {
+        this.choice = '';
+    }
+
+}
+
+class User extends Player {
+    constructor() {
+        super();
         this.wins = 0;
         this.losses = 0;
         this.draws = 0;
         this.games = 0;
-        this.choice = '';
+
 
         this.winsDis = document.querySelector('div.wins span');
         this.lossesDis = document.querySelector('div.losses span');
@@ -38,9 +46,9 @@ class Player {
 
 }
 
-class Computer {
+class Computer extends Player {
     constructor() {
-        this.choice = '';
+        super();
         this.choiceBoxes = [...document.querySelectorAll('div.ai-choice div.ai-choiceBox')];
     }
 
@@ -92,9 +100,14 @@ class Game {
                 box.classList.remove('active');
             });
         }
+
+        this.getIsFinished = () => {
+            return this.isFinished;
+        }
     }
 
     addEventToChoiceBoxes() {
+
         this.choiceBoxes.forEach((box, i) => {
             box.addEventListener('click', () => {
                 this.choiceBoxes.forEach((box) => {
@@ -138,6 +151,7 @@ class Game {
     }
 
     startGame() {
+
         this.isFinished = false;
         try {
             this.playerChoice = document.querySelector('div.choiceBox.active').dataset.choice;
@@ -158,7 +172,7 @@ class Game {
 
 // End of classes
 
-const player = new Player();
+const player = new User();
 const computer = new Computer();
 const game = new Game(player, computer);
 
