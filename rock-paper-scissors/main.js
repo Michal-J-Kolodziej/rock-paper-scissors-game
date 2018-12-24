@@ -151,7 +151,7 @@ class Game {
     }
 
     startGame() {
-
+        if (!game.isFinished) return;
         this.isFinished = false;
         try {
             this.playerChoice = document.querySelector('div.choiceBox.active').dataset.choice;
@@ -176,13 +176,8 @@ const player = new User();
 const computer = new Computer();
 const game = new Game(player, computer);
 
-// Game function
-const startGame = () => {
-    if (!game.isFinished) return;
-    game.startGame();
-
-}
-
 const playButton = document.querySelector('div.play button.start');
-playButton.addEventListener('click', startGame);
+playButton.addEventListener('click', () => {
+    game.startGame();
+});
 game.addEventToChoiceBoxes();
